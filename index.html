@@ -1,146 +1,162 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <meta http-equiv="Access-Control-Allow-Origin" content="*"> -->
-  <link rel="shortcut icon" href="./src/img/favicon.ico">
-  <title>Web前端个人简历</title>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
 
-  <!-- ---------------CSS引用--------------------- -->
-  <link rel="stylesheet" href="lib/bootstrap.min.css"><!-- bootsarap -->
-  <link rel="stylesheet" href="lib/lizi/style.css"><!-- 粒子样式 -->
-  <link rel="stylesheet" href="src/css/base.min.css"><!--    自己的CSS压缩版-->
+    <title>H5小游戏合集</title>
+    <meta content="H5小游戏合集" name="keywords"/>
+    <meta content="一套多个小游戏网站合集，采用响应式布局设计，自适应手机移动端，用户体验更好。" name="description"/>
+    <meta content="" name="author"/>
+    <meta content="" name="copyright"/>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta content="width=device-width" name="viewport"/>
+    <!-- Bootstrap core CSS     -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!--  Material Dashboard CSS    -->
+    <link href="css/material-dashboard.css" rel="stylesheet"/>
+
+    <!--     Fonts and icons     -->
+    <link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='css/2d7207a20f294df196f3a53cae8a0def.css' rel='stylesheet' type='text/css'>
+    <link href="https://echeverra.cn/wp-content/uploads/2021/06/cropped-thmub-32x32.jpg" rel="icon" sizes="32x32">
+
+    <style>
+        .main-panel > .content {
+            padding: 0 !important;
+        }
+    </style>
 </head>
-
 <body>
+<div class="wrapper">
 
-  <!-- ---------------JS--------------------- -->
-  <script src="lib/less.min.js"></script> <!--  less-->
-  <script src="lib/jquery.min.js"></script><!-- jq,bootsrap-->
-  <script src="lib/bootstrap.min.js"></script>
+    <div class="sidebar" data-color="purple" data-image="images/paper.jpg">
+        <!--
+            Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
-  <script src="lib/handlebars.min.js"></script><!-- 模板引擎js -->
-  <script src="lib/lizi/particless.min.js"></script><!-- 粒子js -->
-  <!-- <link rel="import" href="html/main.html" id="boxs" /> -->
+            Tip 2: you can also add an image using data-image tag
+        -->
 
-  <!--主要内容html -->
-  <div id="box"></div>
+        <div class="logo">
+            <a class="simple-text" href="link/0.html" target="right">H5小游戏合集</a>
+        </div>
 
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="active">
+                    <a href="link/0.html" target="right">
+                        <i class="fa fa-twitch"></i>
+                        <p>全部游戏</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="link/1.html" target="right">
+                        <i class="fa fa-mortar-board"></i>
+                        <p>益智游戏</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="link/2.html" target="right">
+                        <i class="fa fa-reddit-alien"></i>
+                        <p>动作游戏</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="link/3.html" target="right">
+                        <i class="fa fa-rocket"></i>
+                        <p>射击游戏</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="link/4.html" target="right">
+                        <i class="fa fa-houzz"></i>
+                        <p>消除游戏</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="link/5.html" target="right">
+                        <i class="fa fa-modx"></i>
+                        <p>休闲游戏</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="link/6.html" target="right">
+                        <i class="fa fa-delicious"></i>
+                        <p>棋牌游戏</p>
+                    </a>
+                </li>
+            </ul>
+            <div align="center">
+                <hr>
+                <a href="#" style="text-decoration: underline;font-size: 16px"
+                   target="_blank">免费GM公益服游戏</a>
+                <hr>
+                <a href="95H5/index.html" style="text-decoration: underline;font-size: 16px"
+                   target="_blank">更多游戏</a>
+            </div>
+        </div>
+    </div>
 
-  <script type="module" crossorigin="use-credentials">
-    import configData from './src/config.js'; //加载配置文件
-    var arrMastering = configData.page4.proresslist;//部分模块数据的动态渲染
+    <div class="main-panel">
+        <nav class="navbar navbar-transparent navbar-absolute" style="background-color: #fff;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" type="button">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
 
-    $('#box').load('html/main.html', function () {
-      //1、渲染模板
-      var html = $('#box').html();//获取内容模板
-      var template = Handlebars.compile(html); //编译
-      var htmls = template(configData);//渲染模板
-      $('#box').html(htmls);//写入模板
-
-
-      //2、事件监听
-      particlesJS.load('particles', 'lib/lizi/particles.json', function () { //加载粒子
-        console.log('callback - particles.js config loaded');
-      });
-
-      arrMastering = configData.page4.proresslist;//部分模块数据的动态渲染
-
-      window.addEventListener('scroll', scrollEvent) //对window滚动的监听
-      bindEvenInit(); //锚点定位初始化
-    });
-
-
-    // 原生link import兼容性检测代码
-    function supportsImports() {
-      return 'import' in document.createElement('link');
-    }
-    //锚点定位初始化
-    function bindEvenInit() {
-      $('.navbtn').bind("click touch", function () {
-        //scrollTop 滚动到  $(this).attr('href')锚点关联id所在位置
-        $('html,body').animate({ scrollTop: ($($(this).attr('href')).offset().top) }, 500)
-        return false
-      })
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      });
-      $('.element').on('click', function () {
-        $(this).popover('toggle')
-      })
-
-      $('#slideBut').on("click touch", function () {
-        $('#slideList').slideToggle(1000);
-      })
-
-      $('.navbtn').click(function () {
-        $('#slideList').css('display', 'none')
-      })
-    }
-    //播放音乐初始化方法
-    function audioInit() {
-      var audio = $('#audio').children('audio')[0];
-      if (audio) {
-        var audioControls = $('#audio').children('.audio-controls')[0]
-        if (audio) {
-          audio.volume = 0.05;//默认音量
-          $('#audioClick').click(function () {
-            if (audio.paused) {
-              audio.play();
-              audioControls.style.animationPlayState = "running"
-              $('#audioClick').addClass('icon-play_fill').removeClass('icon-zantingtingzhi')
-            } else {
-              audio.pause();
-              audioControls.style.animationPlayState = "paused"
-              $('#audioClick').addClass('icon-zantingtingzhi').removeClass('icon-play_fill')
-            }
-          })
-        }
-      }
-    }
-    //删除元素方法
-    function removeElement(_element) {
-      var _parentElement = _element.parentNode;
-      if (_parentElement) {
-        _parentElement.removeChild(_element);
-      }
-    }
-    //滚动事件监听
-    function scrollEvent() {
-      var vues = this;
-      var a, b, c;
-      a = $(window).height();//页面高度
-      b = $(window).scrollTop();//获取滚动高度
-
-      $('.page').each(function () {
-        c = $(this).offset().top;
-        var tag = true;
-        if (a + b - 120 > c) {
-          if (!$(this).find('.container').hasClass('animateload')) {
-            $(this).find('.container').addClass('animateload')
-          }
-
-          if ($(this)[0].id == 'page4' || tag) {
-            tag = false
-            $(this).find('.proress').each(function (i, n) {
-              $(this).find('.bar-propress')[0].style.width = arrMastering[i].value;
-              $(this).find('.propress-title').text(arrMastering[i].title);
-              $(this).find('.bar-propress').children('span').text(arrMastering[i].value)
-            })
-          }
-        } else {
-          // if($(this).find('.container').hasClass('animateload')) {$(this).find('.container').removeClass('animateload')}
-        }
-      })
-    }
-
-  </script>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row" style="margin-top: -15px;">
 
 
+                    <iframe height="999" id="iframe" name="right" src="link/0.html" style="border: none;"
+                            width="100%"></iframe>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 </body>
+
+<!--   Core JS Files   -->
+<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/material.min.js" type="text/javascript"></script>
+
+<!--  Charts Plugin -->
+<script src="js/chartist.min.js"></script>
+
+
+<script src="js/material-dashboard.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#iframe').height($(window).height() - 70);
+
+        $(".nav li").click(function () {
+
+            $(".nav li").removeClass("active");
+            $(this).addClass("active");
+
+        })
+
+        // Javascript method's body can be found in assets/js/demos.js
+
+    });
+</script>
 
 </html>
